@@ -2,6 +2,10 @@
   "name": "astro-blog",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "browerslist": [
+    "defaults"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,6 +14,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.13.2"
+    "astro": "^4.13.2",
+    "postcss": "^8.4.41",
+    "postcss-preset-env": "^10.0.0"
   }
 }
