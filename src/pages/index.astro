@@ -1,4 +1,6 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+
 // const str = "Levi"
 // const num = 1
 // const obj = {
@@ -8,11 +10,11 @@
 // }
 // const isVisible = false;
 
-const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=50")
-const data = await res.json()
+// const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=50")
+// const data = await res.json()
 ---
 
-<html lang="en">
+<!-- <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -30,4 +32,11 @@ const data = await res.json()
 			}
 		</ul>
 	</body>
-</html>
+</html> -->
+
+<MainLayout title="My Blog" description="Main Page">
+	<p>Hi from Home</p>
+</MainLayout>
+
+
+
