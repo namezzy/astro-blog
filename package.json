@@ -14,8 +14,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/ic": "^1.1.18",
     "astro": "^4.13.2",
     "astro-icon": "^1.1.0",
+    "cheerio": "1.0.0-rc.12",
     "postcss": "^8.4.41",
     "postcss-preset-env": "^10.0.0"
   }
