@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@iconify-json/ic": "^1.1.18",
+    "@iconify-json/tabler": "^1.1.120",
     "astro": "^4.13.2",
     "astro-icon": "^1.1.0",
     "cheerio": "1.0.0-rc.12",
