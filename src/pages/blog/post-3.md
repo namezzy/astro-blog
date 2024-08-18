@@ -1,5 +1,5 @@
 ---
-
+layout: "../../layouts/BlogPostLayout.astro"
 title: Beginning with CSS
 date: 2024-08-15
 author: Darnell McClure

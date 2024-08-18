@@ -1,5 +1,5 @@
 ---
-
+layout: "../../layouts/BlogPostLayout.astro"
 title: JavaScript SchmavaScript
 date: 2024-08-15
 author: Victoria Greenfelder
