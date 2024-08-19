@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPostLayout.astro"
 title: Running out of sample post ideas
-date: 2024-08-15
+date: 2024-08-16
 author: Victoria Greenfelder
 image: {
   src: "/images/post-2.jpg",
