@@ -7,30 +7,32 @@ import Pageination from "../../components/Pageination.astro";
 // utils imports
 import { formatBlogPosts } from "../../js/utils";
 
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("./*.md");
+  const formattedPosts = formatBlogPosts(allPosts);
 
-export async function getStaticPaths({paginate}) {
-const allPosts = await Astro.glob("./*.md");
-const formattedPosts = formatBlogPosts(allPosts);
-
-return paginate(formattedPosts, {
-  pageSize: 3,
-})
+  return paginate(formattedPosts, {
+    pageSize: 1,
+  });
 }
 
-const {page} = Astro.props
-console.log(page)
+const { page } = Astro.props;
 ---
 
 <MainLayout title="My Blog">
   <section class="container" aria-label="New Blog Posts">
     <h1 class="h1">New Blog Posts</h1>
     <div class="post-container">
-        {
-           page.data.map((post) => (
-              <PostCard frontmatter={post.frontmatter} url={post.url} tagType="h2" />
-            ))
-          }
+      {
+        page.data.map((post) => (
+          <PostCard
+            frontmatter={post.frontmatter}
+            url={post.url}
+            tagType="h2"
+          />
+        ))
+      }
     </div>
-    <Pageination  prevUrl={page.url.prev} nextUrl={page.url.next}/>
+    <Pageination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
 </MainLayout>
