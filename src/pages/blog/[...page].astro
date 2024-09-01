@@ -6,6 +6,7 @@ import Pageination from "../../components/Pageination.astro";
 
 // utils imports
 import { formatBlogPosts } from "../../js/utils";
+import CategoryCloud from "../../components/CategoryCloud.astro";
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("./*.md");
@@ -35,4 +36,8 @@ const { page } = Astro.props;
     </div>
     <Pageination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
+  <aside class="container" aria-label="Blog categories">
+    <h2 class="h3">Blog Categories</h2>
+    <CategoryCloud showCount={true} />
+  </aside>
 </MainLayout>
