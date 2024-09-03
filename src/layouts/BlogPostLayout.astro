@@ -4,20 +4,23 @@ import PostHeader from "../components/PostHeader.astro";
 import CategoryCloud from "../components/CategoryCloud.astro";
 import MainLayout from "./MainLayout.astro";
 
-const { frontmatter } = Astro.props;
+// utils imports
+import { formatBlogPosts } from "../js/utils";
 
+const { frontmatter } = Astro.props;
 const { title, description, date, category, author, image } = frontmatter;
+
+const allPosts = await Astro.glob("../pages/blog/*.md");
+const formattedPosts = formatBlogPosts(allPosts);
+
+const relatedPosts = formattedPosts.filter(
+  (post) => post.frontmatter.category === category &&  post.frontmatter.title !== title
+);
+
 ---
 
 <MainLayout title={title} {description}>
-  <PostHeader 
-    {title}
-    {description}
-    {date}
-    {category}
-    {image}
-    {author}
-  />
+  <PostHeader {title} {description} {date} {category} {image} {author} />
 
   <div class="post-content">
     <div class="content">
