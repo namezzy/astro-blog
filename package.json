@@ -14,6 +14,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.1.6",
     "@iconify-json/ic": "^1.1.18",
     "@iconify-json/tabler": "^1.1.120",
     "astro": "^4.13.2",
