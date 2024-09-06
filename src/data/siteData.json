@@ -1,0 +1,8 @@
+{
+    "title": "XMJ's Astro Blog",
+    "description": "My musings about the Astro framework",
+    "image": {
+      "src": "/images/image-default.jpg",
+      "alt": "XMJ's Astro Blog"
+    }
+  }
