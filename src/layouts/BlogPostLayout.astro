@@ -7,7 +7,6 @@ import RelatedPosts from "../components/RelatedPosts.astro";
 // utils imports
 import { formatBlogPosts } from "../js/utils";
 
-
 const { frontmatter } = Astro.props;
 const { title, description, date, category, author, image } = frontmatter;
 
@@ -19,12 +18,19 @@ const formattedPosts = formatBlogPosts(allPosts, {
 const relatedPosts = formattedPosts
   .filter(
     (post) =>
-      post.frontmatter.category.toLowerCase() === category.toLowerCase() && post.frontmatter.title !== title
+      post.frontmatter.category.toLowerCase() === category.toLowerCase() &&
+      post.frontmatter.title !== title
   )
   .slice(0, 3);
 ---
 
-<MainLayout title={title} {description}>
+<MainLayout
+  title={title}
+  {description}
+  image={frontmatter.image}
+  {frontmatter}
+  robots={frontmatter.robots}
+>
   <PostHeader {title} {description} {date} {category} {image} {author} />
 
   <div class="post-content">
@@ -41,7 +47,7 @@ const relatedPosts = formattedPosts
         relatedPosts.length > 0 && (
           <aside class="container" aria-label="Blog categories">
             <h2 class="h3">Related Posts</h2>
-            <RelatedPosts {relatedPosts}/>
+            <RelatedPosts {relatedPosts} />
           </aside>
         )
       }
