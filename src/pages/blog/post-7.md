@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPostLayout.astro"
 title: Creating a Modern Web Application with React, Vite, and TypeScript
 date: 2024-09-08
-author: Anna Dixon
+author: Levi Zhao
 image: {
   src: "/images/post-7.png",
   alt: "A picture of a coder",
@@ -11,14 +11,14 @@ description: In this project, we’ll build React project
 draft: false
 category: React
 ---
-
-
 1. Introduction
    (Brief overview of technologies)
+
 
 2. Setting Up the Development Environment
    - Install Node.js from https://nodejs.org/
    - Verify installation:
+
      ```
      node --version
      npm --version
@@ -184,5 +184,3 @@ category: React
 
 12. Conclusion
     (Recap and next steps)
-
-Would you like me to expand on any specific part of this article or add more details to any section?
