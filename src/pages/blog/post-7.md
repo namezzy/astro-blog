@@ -182,5 +182,3 @@ category: React
     - The built files will be in the `dist` directory
     - Deploy these files to your hosting platform
 
-12. Conclusion
-    (Recap and next steps)
